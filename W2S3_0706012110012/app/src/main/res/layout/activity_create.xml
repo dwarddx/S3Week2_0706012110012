@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:backgroundTint="#FFF2E7"
+    tools:context=".CreateActivity">
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="127dp"
+        android:layout_height="125dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/backButton"
+        app:srcCompat="@android:drawable/ic_menu_gallery"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#FFF2E7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="?attr/homeAsUpIndicator"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/createUpHewan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:fontFamily="@font/alata"
+        android:text="Tambah Hewan"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/backButton"
+        app:layout_constraintTop_toTopOf="@+id/backButton" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/animalName"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="1dp"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton2">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#9DD36D"
+            android:hint="Nama Hewan" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/animalAge"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/animalName"
+        app:layout_constraintStart_toStartOf="@+id/animalName"
+        app:layout_constraintTop_toBottomOf="@+id/animalName">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#9DD36D"
+            android:hint="Usia Hewan"
+            android:inputType="number" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <RadioGroup
+        android:id="@+id/animalType"
+        android:layout_width="380dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/animalAge">
+
+        <RadioButton
+            android:id="@+id/radioButton5"
+            android:layout_width="122dp"
+            android:layout_height="wrap_content"
+            android:text="Sapi" />
+
+        <RadioButton
+            android:id="@+id/radioButton6"
+            android:layout_width="133dp"
+            android:layout_height="wrap_content"
+            android:text="Ayam" />
+
+        <RadioButton
+            android:id="@+id/radioButton7"
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:text="Kambing" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/buttonS"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:backgroundTint="#9DD36D"
+        android:text="Simpan"
+        app:layout_constraintEnd_toEndOf="@+id/animalType"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/animalType"
+        app:layout_constraintTop_toBottomOf="@+id/animalType" />
+
+    <TextView
+        android:id="@+id/ErrorHandle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pilih Salah Satu!"
+        android:textColor="#F40000"
+        app:layout_constraintEnd_toEndOf="@+id/animalType"
+        app:layout_constraintStart_toStartOf="@+id/animalType"
+        app:layout_constraintTop_toBottomOf="@+id/animalType" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
